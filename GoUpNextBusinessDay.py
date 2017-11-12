@@ -1,7 +1,6 @@
 #EQ36A89Y52SSFKPM
 import requests
 import datetime
-import json
 
 def convertDate(time):
     month = str(time.month)
@@ -38,4 +37,4 @@ def goUpNextBusinessDay(ticker, timestamp):
     else: return False
 
 
-print(goUpNextBusinessDay("MSFT", "1509757323"))
+print(goUpNextBusinessDay("MSFT", "1509837783"))
