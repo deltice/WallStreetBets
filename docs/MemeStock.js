@@ -15,6 +15,6 @@ $(document).ready(function() {
     }</li><li>Equity: $${(stock[2] * stock[1]).toLocaleString(undefined, {
       minimumFractionDigits: 2
     })}</li><li>Position: ${stock[3]}</li></ul><br>`;
-    $("#stockInfo").append(newStock);
+    $("#stocks").append(newStock);
   });
 });
