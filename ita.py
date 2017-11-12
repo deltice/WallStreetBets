@@ -1,3 +1,5 @@
+# investopedia trading api
+
 import mechanicalsoup
 from enum import Enum
 from collections import namedtuple
