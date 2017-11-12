@@ -20,6 +20,10 @@ def goUpNextBusinessDay(ticker, timestamp):
     time = datetime.datetime.fromtimestamp(int(timestamp))
     date = convertDate(time)
 
+    while not date in dict["Time Series (Daily)"]:
+        time += datetime.timedelta(days=1)
+        date = convertDate(time)
+
     closing1 = (dict["Time Series (Daily)"][date]["4. close"])
 
     time += datetime.timedelta(days=1)
@@ -34,4 +38,4 @@ def goUpNextBusinessDay(ticker, timestamp):
     else: return False
 
 
-print(goUpNextBusinessDay("MSFT", "1509703383"))
+print(goUpNextBusinessDay("MSFT", "1509757323"))
